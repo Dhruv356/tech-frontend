@@ -1,0 +1,104 @@
+/* Signup Page Styles */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .signup-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .signup-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0a4d68;
+  }
+  
+  .form-group {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    border-color: #f80404;
+    outline: none;
+  }
+  .dropdown label {
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+    color: #333;
+  }
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    background: #222831;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+  }
+  
+  .signup-btn:hover {
+    background: #f80404;
+  }
+  
+  .error-message {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .success-message {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .signup-link a {
+    color: #0a4d68;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }

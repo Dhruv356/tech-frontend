@@ -1,0 +1,120 @@
+/* 📦 Admin Orders Container */
+.admin-orders-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures smooth scrolling */
+  }
+  
+  .admin-orders-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* ✅ Scrollable Table Wrapper */
+  .orders-table-wrapper {
+    width: 100%;
+    max-height: 500px; /* Limits max height for vertical scrolling */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  /* ✅ Scrollable Table Container */
+  .orders-table-container {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+  }
+  
+  /* 📜 Orders Table */
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* Prevents shrinking */
+  }
+  
+  .orders-table th,
+  .orders-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Prevents text wrapping */
+  }
+  
+  .orders-table th {
+    background: #222831; /* Dark background */
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .orders-table tr:nth-child(even) {
+    background: #f8f9fa;
+  }
+  
+  .orders-table tr:hover {
+    background: #f1f1f1;
+  }
+  
+  /* 📌 Status Labels */
+  .status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* 🎨 Status Colors */
+  .status.pending {
+    background: #ffc107;
+    color: #333;
+  }
+  
+  .status.processing {
+    background: #17a2b8;
+    color: #fff;
+  }
+  
+  .status.shipped {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .status.delivered {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .status.cancelled {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  /* 📱 Responsive Styles */
+  @media (max-width: 768px) {
+    .admin-orders-container {
+      padding: 15px;
+    }
+  
+    .orders-table {
+      min-width: 600px;
+    }
+  
+    .orders-table th,
+    .orders-table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .status {
+      font-size: 10px;
+      padding: 4px 6px;
+    }
+  }
+  

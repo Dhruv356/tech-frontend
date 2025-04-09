@@ -1,0 +1,95 @@
+.product-reviews {
+  padding: 20px 0;
+}
+
+/* Tabs (Description & Reviews) */
+.product-reviews ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 2px solid #ddd;
+}
+.product-reviews li {
+  cursor: pointer;
+  font-weight: 500;
+}
+.product-reviews li {
+  display: inline-block;
+}
+
+.product-reviews li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px;
+  color: #9c9b9b;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.product-reviews li button:hover,
+.product-reviews li button:focus {
+  cursor: cell;
+  color: #000;
+}
+
+.product-reviews li button.active {
+  color: #000;
+  border-bottom: 2px solid #F84040; /* Red Accent */
+}
+
+/* Product Description */
+.product-reviews p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Reviews Section */
+.product-reviews .rates {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.product-reviews .rate-comment {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 5px;
+  border-left: 4px solid #F84040;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product-reviews .rate-comment span {
+  font-weight: 600;
+  color: #222831;
+}
+
+.product-reviews .rate-comment span:nth-of-type(2) {
+  color: #ffcd4e;
+  font-weight: 500;
+}
+
+/* No Reviews Message */
+.product-reviews .no-reviews {
+  color: #777;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-reviews ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

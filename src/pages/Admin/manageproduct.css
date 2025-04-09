@@ -1,0 +1,245 @@
+/* 📦 Scrollable Product Table */
+.admin_table-container {
+    display: flexbox;
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background: #ffffff;
+  }
+  
+  /* 📦 Product Table */
+  .product-table {
+    width: 100;
+    border-collapse: collapse;
+    min-width: 800px; /* Ensures the table doesn't shrink too much */
+    margin-top: 10px;
+  }
+  
+  .product-table th,
+  .product-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+    white-space: nowrap; /* Prevents text wrapping */
+  }
+  
+  .product-table th {
+    background-color: #212529;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .product-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .product-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* 🖼 Product Image */
+  .product-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+    background-color: #e9ecef;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* ✏️ Edit & 🗑 Delete Buttons */
+  .actions {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .edit-btn {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  .edit-btn:hover {
+    background-color: #ffca2c;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .delete-btn:hover {
+    background-color: #bb2d3b;
+  }
+  
+  /* ✅ Responsive Adjustments */
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 20px;
+    }
+  
+    .add-product-btn {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  
+    .table-container {
+      max-height: 400px; /* Reduce height for smaller screens */
+    }
+  
+    .product-table {
+      min-width: 600px; /* Ensure table is scrollable on small screens */
+    }
+  
+    .product-table th,
+    .product-table td {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    .product-image {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .edit-btn,
+    .delete-btn {
+      font-size: 10px;
+      padding: 4px 6px;
+    }
+  }
+/* ==============================
+   ✨ Improved Modal Styling
+   ============================== */
+
+   .modal {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* ✅ Slightly lighter overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* ✅ Always above other elements */
+  }
+  
+  /* ✅ Fixed Class Name */
+  .modal-content-admin {
+    background: white;
+    width: 90%;
+    max-width: 550px; /* ✅ Increased width for better visibility */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* ✅ Improved Input Fields */
+  .modal-content-admin input,
+  .modal-content-admin textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #bbb; /* ✅ Softer border */
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  .modal-content-admin input:focus,
+  .modal-content-admin textarea:focus {
+    border-color: #007bff; /* ✅ Highlight on focus */
+  }
+  
+  /* ✅ Improved Textarea */
+  .modal-content-admin textarea {
+    height: 100px; /* ✅ Increased height */
+    resize: vertical;
+  }
+  
+  /* ✅ Buttons */
+  .modal-content-admin .edit-btn,
+  .modal-content-admin .delete-btn {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .modal-content-admin .edit-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .modal-content-admin .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .modal-content-admin .edit-btn:hover {
+    background-color: #218838;
+  }
+  
+  .modal-content-admin .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* ✨ Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ✅ Mobile Responsive */
+  @media (max-width: 600px) {
+    .modal-content-admin {
+      width: 95%;
+      padding: 20px;
+    }
+    
+    .modal-content-admin input,
+    .modal-content-admin textarea {
+      font-size: 14px;
+      padding: 10px;
+    }
+    
+    .modal-content-admin .edit-btn,
+    .modal-content-admin .delete-btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
+  

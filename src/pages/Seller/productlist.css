@@ -1,0 +1,279 @@
+/* 📦 Product List Container */
+.product-list-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* ✅ Scrollable Table Container */
+  .table-container {
+    max-height: 600px; /* Adjust based on your needs */
+    overflow-y: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  /* ✅ Product Table */
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+  }
+  
+  /* ✅ Sticky Table Header */
+  .product-table thead {
+    position: sticky;
+    top: 0;
+    background: #222831;
+    z-index: 10;
+  }
+  .product-list-container h1{
+    text-align: center;
+    color: #222831;
+  }
+  
+  .product-table th,
+  .product-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  .product-table th {
+    background: #222831;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Alternate row color */
+  .product-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .product-table tr:hover {
+    background: #f1f1f1;
+  }
+  
+  /* 🖼 Product Image */
+  .product-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  
+  /* 🎨 Buttons Styling */
+  .button-container {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .edit-btn,
+  .delete-btn,
+  .details-btn {
+    border: none;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .edit-btn {
+    background: #ffc107;
+    color: #000;
+  }
+  
+  .edit-btn:hover {
+    background: #ffca2c;
+  }
+  
+  .delete-btn {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  .delete-btn:hover {
+    background: #bb2d3b;
+  }
+  
+  .details-btn {
+    background: #17a2b8;
+    color: #fff;
+  }
+  
+  .details-btn:hover {
+    background: #138496;
+  }
+  /* ==============================
+   ✨ Edit Product Modal Styling
+   ============================== */
+.edit-modal .modal-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 100%;
+  max-width: 600px; /* ✅ Ensures better width */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✅ Modal Header */
+.edit-modal .modal-header {
+  border-bottom: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+/* ✅ Modal Title */
+.edit-modal .modal-title {
+  font-weight: 600;
+  color: #333;
+}
+/* ✅ Fix for the modal image */
+.modal-product-img {
+  width: 100%;
+  max-width: 300px; /* Adjust the size as per your design */
+  height: auto;
+  display: block;
+  margin: 0 auto 15px; /* Center the image inside the modal */
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+/* ✅ Form Input Styling */
+.edit-modal .modal-body .form-group {
+  margin-bottom: 15px;
+}
+
+.edit-modal .modal-body label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.edit-modal .modal-body input,
+.edit-modal .modal-body textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.edit-modal .modal-body input:focus,
+.edit-modal .modal-body textarea:focus {
+  border-color: #007bff;
+}
+
+/* ✅ Buttons Styling */
+.edit-modal .modal-footer {
+  border-top: 1px solid #dee2e6;
+  padding: 15px;
+  text-align: right;
+}
+
+.edit-modal .modal-footer .btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-modal .modal-footer .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.edit-modal .modal-footer .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.edit-modal .modal-footer .btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}
+
+.edit-modal .modal-footer .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* ✅ Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 600px) {
+  .edit-modal .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .edit-modal .modal-body input,
+  .edit-modal .modal-body textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .edit-modal .modal-footer .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 768px) {
+    .product-list-container {
+      padding: 15px;
+    }
+  
+    .table-container {
+      max-height: 300px;
+    }
+  
+    .product-table th,
+    .product-table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .button-container {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .edit-btn,
+    .delete-btn,
+    .details-btn {
+      font-size: 10px;
+      padding: 5px 8px;
+    }
+  }
+  

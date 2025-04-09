@@ -1,0 +1,222 @@
+
+/*sellerorder.css*/
+/* General container styling */
+.seller-orders-container {
+ 
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Table Styling */
+  .orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .orders-table th, 
+  .orders-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .orders-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Alternating Row Colors */
+  .orders-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .orders-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Product Image */
+  .product-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 6px;
+    object-fit: fill;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  /* Status Badge Styling */
+  .status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+  }
+  
+  .status.processing {
+    background-color: #ffeb3b;
+    color: #333;
+  }
+  
+  .status.shipped {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .status.delivered {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  /* Select Dropdown Styling */
+  select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  select:hover {
+    border-color: #888;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .orders-table th, .orders-table td {
+      padding: 10px;
+      font-size: 0.85rem;
+    }
+  
+    .seller-orders-container {
+      padding: 16px;
+    }
+  }
+  
+  /* Address Column */
+  .address-column {
+    max-width: 250px;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  
+  /* View Button */
+  .view-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .view-btn:hover {
+    text-decoration: underline;
+  }
+  .image-preview-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .preview-image {
+    width: 150px;
+    height: 150px;
+    object-fit: fill;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+  }
+  /* 🏠 Seller Orders Container */
+  .seller-orders-container {
+   
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 📜 Table Styles */
+  .orders-table, .product-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .orders-table th, .orders-table td,
+  .product-table th, .product-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .orders-table th {
+    background: #222831;
+    color: white;
+  }
+  
+  /* 📌 View Details Button */
+  .ord-details-btn {
+    width: 100px;
+    height: 45px;
+    background: #17a2b8;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .details-btn:hover {
+    background: #117a8b;
+  }
+  
+  /* 🔍 Modal Styling */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+  }
+  
+  /* ❌ Close Button */
+  .close-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .close-btn:hover {
+    background: darkred;
+  }
+  

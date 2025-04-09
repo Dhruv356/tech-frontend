@@ -1,0 +1,121 @@
+/* Home Slide Box - Contrast Theme */
+.homeSlide .box {
+    margin-top: 40px;
+    
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.15); /* Light transparency */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 12px;
+    /* box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Home Slide Background */
+.homeSlide {
+     /* Dark to Light Gradient */
+    padding: 0 40px 60px;
+}
+
+/* Headings - Elegant Contrast */
+.homeSlide h1 {
+    font-size: 45px;
+    line-height: 55px;
+    margin: 50px 0 20px 0;
+    color: #222831; /* Deep Dark Blue */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease-in-out;
+}
+
+.homeSlide p {
+    margin: 20px 0;
+    color: #393E46; /* Dark Grey */
+    font-size: 18px;
+}
+
+/* Slider Indicators */
+.homeSlide ul {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.homeSlide ul li {
+    border: 2px solid #eeeeee; /* Light Border */
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.homeSlide ul li:hover {
+    border-color: #00ADB5; /* Light Blue Hover */
+}
+
+.homeSlide ul li button {
+    background: transparent !important;
+    color: transparent !important;
+}
+
+.homeSlide ul li button::before {
+    font-size: 15px !important;
+    color: #00ADB5; /* Light Blue Accent */
+    position: absolute;
+    top: 2px;
+    left: 0;
+    margin: auto;
+}
+
+/* Slider Image */
+.homeSlide .box img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.homeSlide .box img:hover {
+    transform: scale(1.05);
+}
+
+/* Shop Now Button */
+.shop-btn {
+    background: linear-gradient(135deg, #222831, #393E46); /* Dark Gradient */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.shop-btn:hover {
+    background: linear-gradient(135deg, #f80404, #d90429); /* Red Gradient */
+    transform: scale(1.05);
+}
+/* ✅ SlideCard Default Visibility */
+.box {
+  opacity: 1; /* Ensure visibility even if GSAP fails */
+  transform: scale(1);
+}
+
+/* ✅ Text - Ensure Visibility */
+.slide-title,
+.slide-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✅ Image - Ensure Visibility */
+.slide-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ✅ Button - Ensure Visibility */
+.shop-btn {
+  opacity: 1;
+  transform: translateY(0);
+}

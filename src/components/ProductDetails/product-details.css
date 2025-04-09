@@ -1,0 +1,355 @@
+/* 📌 General Styling */
+.product-page {
+  padding: 50px 0;
+
+}
+/* 🎨 Color Selection Card */
+.color-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+
+ 
+}
+
+
+
+.color-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* 🎨 Color Options */
+.color-options {
+  display: flex;
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+/* 🎨 Color Item */
+.color-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+/* 🔵 Color Circle */
+.color-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* ✅ Active Selection */
+.color-option.selected .color-circle {
+  border: 3px solid #ff6b3d;
+  transform: scale(1.2);
+}
+
+.color-option span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.product-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 🖼️ Product Image Section */
+.image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.main-image:hover {
+  transform: scale(1.07) rotate(-1deg);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎭 Thumbnails */
+.thumbnail-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.thumbnail.active {
+  border: 3px solid #ff6b3d;
+  opacity: 1;
+}
+
+/* 🏷️ Product Details */
+.details-section {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔥 Product Title */
+.product-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+/* ⭐ Ratings */
+.rate {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rate span {
+  font-size: 15px;
+  color: #666;
+}
+
+/* 💰 Price */
+.info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.discounted-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff6b3d;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 📝 Product Description */
+.description {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+
+/* 🔢 Quantity Controls */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.qty-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #222831;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.qty-btn:hover {
+  background: #ff6b3d;
+}
+
+.qty-input {
+  width: 60px;
+  height: 42px;
+  border: 2px solid #222831;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+}
+/* 🚀 Buttons */
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.add-to-cart,
+.buy-now {
+  flex: 1;
+  padding: 14px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-to-cart {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  color: white;
+}
+
+.buy-now {
+  background: linear-gradient(45deg, #222831, #0f0f0f);
+  color: white;
+}
+
+.add-to-cart:hover,
+.buy-now:hover {
+  transform: scale(1.05);
+}
+
+/* 🎇 Swipe Animation Effect */
+.buy-now::after {
+  
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  transition: left 0.5s ease-in-out;
+}
+
+.buy-now:hover::after {
+  left: 100%;
+  
+}
+
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 992px) {
+  .product-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thumbnail-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+/* Color selection container */
+.color-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.color-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Flexbox for color options */
+.color-options {
+  display: flex;
+  gap: 12px;
+}
+
+/* Each color option box */
+.color-option {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 110px; /* Fixed width */
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Highlight the selected color */
+.color-option.selected {
+  border-color: blue;
+}
+
+/* Product image styling */
+.color-image {
+  width: 90px;  /* Fixed image width */
+  height: 90px; /* Fixed image height */
+  object-fit: cover; /* Ensures the image does not stretch */
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+/* Price styling */
+.product-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin: 2px 0;
+}
+
+/* Original price with strike-through */
+.original-price {
+  font-size: 12px;
+  color: gray;
+  text-decoration: line-through;
+}

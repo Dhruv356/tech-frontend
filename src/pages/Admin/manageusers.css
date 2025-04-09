@@ -1,0 +1,133 @@
+/* 🎯 Admin Panel Container */
+
+  /* 🎯 Section Titles (Dark Gray) */
+  .admin-title,
+  .seller-requests h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    color: #222831; /* ✅ Updated to Dark Gray */
+  }
+  
+  /* 🎯 Table Wrapper (Scroll for Large Data) */
+  .user-table-wrapper {
+    max-height: 380px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fdfdfd;
+  }
+  
+  /* 🎯 Table Styling */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+    font-size: 1rem;
+  }
+  
+  /* 🎯 Table Header */
+  .user-table thead {
+    position: sticky;
+    top: 0;
+    background-color: #222831; /* ✅ Updated to Dark Gray */
+    color: white;
+    z-index: 2;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+  }
+  
+ 
+  
+  /* 🎯 Role Selection Dropdown */
+  .role-select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .role-select:hover {
+    border-color: #222831; /* ✅ Dark Gray Hover */
+  }
+  
+  /* 🎯 Buttons (Delete, Approve, Reject) */
+  .approve-btn,
+  .reject-btn,
+  .delete-button {
+    padding: 8px 12px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    font-size: 0.9rem;
+    margin: 0 5px;
+  }
+  
+  /* ✅ Delete Button */
+  .delete-button {
+    background-color: #dc3545;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* ✅ Approve Button */
+  .approve-btn {
+    background: #28a745;
+  }
+  
+  .approve-btn:hover {
+    background: #218838;
+  }
+  
+  /* ✅ Reject Button */
+  .reject-btn {
+    background: #ffc107;
+    color: black;
+  }
+  
+  .reject-btn:hover {
+    background: #e0a800;
+  }
+  
+  /* 🎯 No Requests Message */
+  .no-requests {
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  /* 🎯 Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .user-table {
+      min-width: 100%;
+      font-size: 0.9rem;
+    }
+  
+    .admin-title,
+    .seller-requests h2 {
+      font-size: 1.5rem;
+    }
+  
+    .approve-btn,
+    .reject-btn,
+    .delete-button {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+    }
+  }
+  

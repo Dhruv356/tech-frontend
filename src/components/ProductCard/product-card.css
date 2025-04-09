@@ -1,0 +1,212 @@
+/* Product Card - Contrast Theme */
+.product {
+    background: #ffffff;
+    padding: 20px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    min-height: 400px; /* ✅ Ensures all cards have a minimum height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.thumbnail-container{
+
+    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 10px;
+}
+.thumbnail-container img{
+
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: transform 0.2s ease-in-out;
+}
+/* Hover Effect */
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.product img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+/* Discount Tag */
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #f80404; /* Vibrant Red */
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Product Title */
+.product h3 {
+    margin: 12px 0;
+    font-weight: 600;
+    font-size: 18px;
+    color: #222831; /* Dark Title */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.product h3:hover {
+    color: #007BFF; /* Light Blue Hover */
+}
+
+/* Rating Stars */
+.product .rate i {
+    font-size: 16px;
+    color: #ffcd4e; /* Gold */
+    margin: 5px 5px 5px 0;
+}
+
+/* Price Section */
+.product .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #222831;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Price Heading */
+.price h4 {
+    margin: 15px 0 10px;
+}
+
+/* Add to Cart Button */
+.price button {
+    background: transparent;
+    color: #0f3460;
+    font-size: 18px;
+    transition: 0.3s;
+    border: 2px solid rgba(3, 0, 71, 0.2);
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price button:hover {
+    cursor: pointer;
+    background: linear-gradient(135deg, #222831, #393E46);
+    color: #fff;
+}
+
+/* Floating "Add to Cart" Button */
+button.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 50%;
+    background: #222831;
+    color: white;
+    border: none;
+  
+    transition: 0.4s ease-in-out;
+}
+
+button.add:hover {
+    background: #f80404;
+    transform: rotate(360deg);
+}
+
+/* Wishlist (Like) Button */
+.product-like {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Wishlist Label */
+.product-like label {
+    background-color: #0f3460;
+    padding: 3px 12px;
+    font-size: 12px;
+    color: white;
+    border-radius: 50px;
+}
+
+/* Wishlist Icon */
+.product-like ion-icon {
+    font-size: 22px;
+    margin: 8px 3px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    color: #ff0206; /* Red Heart */
+}
+
+.product-like ion-icon:hover {
+    transform: scale(1.2);
+}
+.qty-input[type="text"] {
+box-shadow: 0 0 0 0;
+border: 2 solid #f80404;
+outline: 0;
+-webkit-appearance: none;
+    width: 50px;
+   
+}
+/* Make Wishlist Button Visible */
+.product:hover .product-like {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .product img {
+        height: 180px;
+    }
+
+    .price button {
+        font-size: 16px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .product h3 {
+        font-size: 16px;
+    }
+
+    .product-like ion-icon {
+        font-size: 18px;
+    }
+}
